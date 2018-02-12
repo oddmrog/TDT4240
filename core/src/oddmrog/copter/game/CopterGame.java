@@ -41,7 +41,6 @@ public class CopterGame extends ApplicationAdapter implements Observer{
         Array<Copter> copters = model.getCopters();
         for(Copter copter : copters) {
             copter.turn();
-            System.out.println("turned");
         }
     }
 }
