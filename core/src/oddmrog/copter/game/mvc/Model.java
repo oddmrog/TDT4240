@@ -6,8 +6,6 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.Array;
 
-import java.util.Observable;
-import java.util.Observer;
 
 import oddmrog.copter.game.sprites.Copter;
 
@@ -15,7 +13,7 @@ import oddmrog.copter.game.sprites.Copter;
  * Created by oddmrog on 08.02.18.
  */
 
-public class Model implements Observer {
+public class Model{
 
     public static final int WIDTH = 640;
     public static final int HEIGHT = 480;
@@ -82,8 +80,4 @@ public class Model implements Observer {
 
     }
 
-    @Override
-    public void update(Observable observable, Object o) {
-
-    }
 }

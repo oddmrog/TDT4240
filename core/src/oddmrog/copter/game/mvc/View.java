@@ -52,11 +52,9 @@ public class View extends Observable{
     public void handleInput(){
         Array<Copter> copters = model.getCopters();
         if(Gdx.input.justTouched()){
-            for(Copter copter : copters) {
-//                notifyObservers("User clicked the screen, copter turned");
-                copter.turn();
-            }
+            notifyObservers();
         }
+
     }
 
     @Override
@@ -65,12 +63,14 @@ public class View extends Observable{
     }
 
     @Override
-    public void notifyObservers(Object o) {
-        super.notifyObservers(o);
+    public synchronized void deleteObserver(Observer observer) {
+        super.deleteObserver(observer);
     }
 
     @Override
-    public synchronized void deleteObservers() {
-        super.deleteObservers();
+    public void notifyObservers() {
+        for (Observer observer : observers){
+            observer.update(this, "lol");
+        }
     }
 }

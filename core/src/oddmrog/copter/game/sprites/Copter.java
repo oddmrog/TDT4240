@@ -102,8 +102,7 @@ public class Copter {
 
     public void turn(){
         velocity.rotate(Vector3.Z, 45);
-        System.out.println("height of texture:" + bounds.height);
-        System.out.println("width of texture:" + bounds.width);
+
     }
 
 
